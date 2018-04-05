@@ -6,11 +6,13 @@ const config = {
     authDomain: "henz-mercadodev.firebaseapp.com",
     databaseURL: "https://henz-mercadodev.firebaseio.com",
     projectId: "henz-mercadodev",
-    storageBucket: "",
+    storageBucket: "gs://henz-mercadodev.appspot.com",
     messagingSenderId: "847329967572"
 }
 
 const app = firebase.initializeApp(config)
 const base = Rebase.createClass(app.database())
+
+export const storage = app.storage()
 
 export default base
