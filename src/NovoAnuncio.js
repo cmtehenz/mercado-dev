@@ -19,6 +19,9 @@ class NovoAnuncio extends Component {
         const file = this.foto.files[0]
         const { name, size } = file
         const ref = storage.ref(name)
+        if(file.size){
+            console.log(size)
+        }
 
         ref
             .put(file)
@@ -40,6 +43,7 @@ class NovoAnuncio extends Component {
                 })
             })
        e.preventDefault()
+       
     }
     
     render (){
